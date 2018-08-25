@@ -22,7 +22,7 @@ var Enemy = function( ) {
   // which will ensure the game runs at the same speed for
   // all computers.
   this.x = (this.x + dt * this.speed * 150) % (500)
-  
+
   if (player.x < this.x + 80 && player.x + 80 > this.x && player.y < this.y + 60 && 60 + player.y > this.y) {
              player.x = 202;
              player.y = 405;
@@ -68,6 +68,9 @@ var Enemy = function( ) {
          } else if (this.y <= -20) {
              this.x = 200;
              this.y = 400;
+
+             
+             alert('You won!');
  
         }
  
