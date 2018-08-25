@@ -18,15 +18,17 @@ var Enemy = function( ) {
  // Update the enemy's position, required method for game
  // Parameter: dt, a time delta between ticks
  Enemy.prototype.update = function( dt ) {
+    // You should multiply any movement by the dt parameter
+  // which will ensure the game runs at the same speed for
+  // all computers.
   this.x = (this.x + dt * this.speed * 150) % (500)
+  
   if (player.x < this.x + 80 && player.x + 80 > this.x && player.y < this.y + 60 && 60 + player.y > this.y) {
              player.x = 202;
              player.y = 405;
              location.reload();
          };
-  // You should multiply any movement by the dt parameter
-  // which will ensure the game runs at the same speed for
-  // all computers.
+ 
  
  };
  
